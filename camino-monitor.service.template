@@ -1,0 +1,15 @@
+[Unit]
+Description=Camino Validator Status Monitor
+After=network.target
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__WORKDIR__
+ExecStart=__WORKDIR__/monitor_validators.py --daemon --interval 30 --force
+Restart=always
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

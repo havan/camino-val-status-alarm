@@ -1,0 +1,11 @@
+# Camino Validator Status Monitor Cron Example
+# Run the monitor once every minute.
+#
+# To install:
+# 1. Open your cron table with the command:
+#    crontab -e
+#
+# 2. Paste the line below at the bottom of your crontab and save:
+#    * * * * * /path/to/camino-val-status-alarm/monitor_validators.py --force
+#
+# Note: Ensure the script path matches your actual installation folder.
