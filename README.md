@@ -2,6 +2,24 @@
 
 A Python utility to monitor validator status on the Camino Network and send desktop alerts when validators go offline.
 
+## Quick Install (Ubuntu)
+
+1. Install dependencies:
+   ```bash
+   sudo apt update && sudo apt install -y python3 libnotify-bin git
+   ```
+
+2. Clone the repository and run the deploy script:
+   ```bash
+   git clone https://github.com/havan/camino-val-status-alarm.git
+   cd camino-val-status-alarm
+   sudo ./deploy_systemd.sh
+   ```
+
+That's it! The background service is now active and monitoring Camino Mainnet every 30 seconds.
+
+---
+
 ## Files
 
 *   **[monitor_validators.py](monitor_validators.py)**: The main python monitor script.
